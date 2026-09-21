@@ -21,7 +21,7 @@ credencial foi deixada pronta de antemão.
 | [`docs/diretrizes-criativos-grupo/`](./docs/diretrizes-criativos-grupo/) | Copywriting avançado, roteiros de reels/ads, diretrizes de legenda — válido para as 3 marcas |
 | [`brand-systems/grupo-hapo-marca-mae/`](./brand-systems/grupo-hapo-marca-mae/) | Brand system da marca mãe (usado também pela Hapo Assessoria): cores, tipografia, logo, ícones |
 | [`brand-systems/hapo-educacao/`](./brand-systems/hapo-educacao/) | Identidade visual da Hapo Educação: logo + tipografia (decidida no handoff), paleta própria ainda pendente |
-| [`comercial/`](./comercial/) | Scripts Python que geram as análises de funil/vendas a partir do Goalfy CRM, + análises agregadas já geradas |
+| [`comercial/`](./comercial/) | Scripts Python que geram as análises de funil/vendas a partir do Goalfy CRM. Os dados/análises já gerados (receita, taxa de fechamento) **não estão neste repositório público** — pedir ao Jian se precisar do histórico |
 | [`skills/ad-art-brief/`](./skills/ad-art-brief/) | Skill do Claude Code: transforma narrativa aprovada em brief de arte completo (headline + prompt de imagem) |
 | [`skills/ad-creative-copy/`](./skills/ad-creative-copy/) | Skill do Claude Code: modelo padrão de legenda de anúncio |
 | [`skills/meta-ads-hapo/`](./skills/meta-ads-hapo/) | Skill do Claude Code: gerencia campanhas Meta Ads via SDK oficial — cadastro de contas filtrado só para as marcas do Grupo Hapo |
