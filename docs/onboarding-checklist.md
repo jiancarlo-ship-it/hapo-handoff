@@ -66,9 +66,9 @@ Usado tanto pelo dashboard quanto pela skill `meta-ads-hapo`.
 
 ## 7. Google Drive — pasta de criativos
 
-- [ ] Pedir acesso à pasta `Hapo - Handoff Jian/Criativos e Videos` no
-      Google Drive do Jian (ele precisa compartilhar essa pasta
-      especificamente com o e-mail da próxima pessoa).
+- [x] Já resolvido: a pasta está compartilhada como "qualquer pessoa com o
+      link pode visualizar" — [link no README](../README.md). Não precisa
+      pedir nada aqui, só abrir o link.
 
 ## 8. Conta do ChatGPT (para o pipeline de artes)
 

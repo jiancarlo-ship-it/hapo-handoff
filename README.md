@@ -28,7 +28,7 @@ credencial foi deixada pronta de antemão.
 
 A **Goalfy tem brand system próprio, em repositório separado**:
 [`goalfy-brand-system`](https://github.com/jiancarlo-ship-it/goalfy-brand-system)
-(privado) — tokens extraídos 1:1 do site ao vivo (goalfy.com.br), componentes
+(público) — tokens extraídos 1:1 do site ao vivo (goalfy.com.br), componentes
 de UI prontos, fonte oficial (Red Hat Text) e logo em `assets/`.
 
 Todas as skills usam variável de ambiente para credenciais (nunca commitadas
@@ -40,7 +40,7 @@ Ads.
 
 **Código (GitHub, conta `jiancarlo-ship-it`):**
 
-- [`hapo-marketing-dashboard`](https://github.com/jiancarlo-ship-it/hapo-marketing-dashboard) (privado) —
+- [`hapo-marketing-dashboard`](https://github.com/jiancarlo-ship-it/hapo-marketing-dashboard) (público) —
   dashboard de Ads ao vivo (Node.js, hospedado no Render) + aba Análise
   Comercial com o funil Goalfy CRM ao vivo. É o app real em uso.
 - [`ad-art-chatgpt-pipeline`](https://github.com/jiancarlo-ship-it/ad-art-chatgpt-pipeline) (público) —
@@ -50,13 +50,14 @@ Ads.
 
 **Artes, vídeos e motions (Google Drive):**
 
-Pasta `Hapo - Handoff Jian/Criativos e Videos` no Google Drive, organizada por
-marca (Goalfy, Hapo Assessoria, Hapo Educação, Diretrizes do Grupo). Contém
-todo o histórico de criativos (inclusive testes e variações descartadas, sem
-filtro) e os vídeos/motions produzidos. **Não confundir** com a pasta "GRUPO
-HAPO" que já existe no mesmo Drive — aquela é mantida por uma equipe externa
-de produção de vídeo/foto e tem conteúdo diferente (material bruto de
-câmera).
+[`Hapo - Handoff Jian / Criativos e Videos`](https://drive.google.com/drive/folders/1g-2_aBQCwKpk-n4UTnFhPbNX-TRCYoSd)
+— pasta compartilhada como "qualquer pessoa com o link pode visualizar",
+organizada por marca (Goalfy, Hapo Assessoria, Hapo Educação, Diretrizes do
+Grupo). Contém todo o histórico de criativos (inclusive testes e variações
+descartadas, sem filtro) e os vídeos/motions produzidos. **Não confundir**
+com a pasta "GRUPO HAPO" que já existe no mesmo Drive — aquela é mantida por
+uma equipe externa de produção de vídeo/foto e tem conteúdo diferente
+(material bruto de câmera).
 
 ## Segurança — leia antes de usar
 
