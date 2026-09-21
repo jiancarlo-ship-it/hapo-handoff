@@ -1,0 +1,48 @@
+# ============================================================================
+# Meta Ads Hapo — Cadastro de Contas (Grupo Hapo)
+# ============================================================================
+#
+# Consulte este arquivo para identificar os IDs corretos de cada marca.
+# O Claude usa automaticamente ao mencionar o nome do cliente.
+#
+# NOTA: este arquivo original também gerencia contas de clientes de agência
+# fora do Grupo Hapo. Nesta cópia de handoff, mantivemos só as marcas do
+# Grupo Hapo, por decisão explícita do responsável pela passagem de bastão.
+#
+# Estrutura:
+#   - slug unico (sem espacos, lowercase)
+#     - nome de exibicao
+#     - conta de anuncio (act_XXX)
+#     - pagina do Facebook (page_id)
+#     - instagram_id
+#     - instagram_username
+#     - moeda
+#     - notas opcionais
+#
+# ============================================================================
+
+clientes:
+
+  hapo-educacao:
+    nome: "Hapo Educação"
+    conta_anuncio: "act_1668613276969859"
+    pagina_facebook: "612079968647163"
+    instagram_id: "17841458790472511"
+    instagram_username: "@hapo.educacao"
+    moeda: "BRL"
+
+  hapo-marketing:
+    nome: "Hapo Marketing"
+    conta_anuncio: "act_420310416839794"
+    pagina_facebook: "104269985800497"
+    instagram_id: "17841412800917303"
+    instagram_username: "@somoshapo"
+    moeda: "BRL"
+
+  goalfy:
+    nome: "Goalfy"
+    conta_anuncio: "act_3161900040691854"
+    pagina_facebook: "117656204265427"
+    instagram_id: "17841451342470312"
+    instagram_username: "@goalfy_"
+    moeda: "BRL"
