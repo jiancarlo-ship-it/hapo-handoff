@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Grupo Hapo — Bem-vindo(a)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --dark:#0D0E0E;
+    --dark-2:#17181A;
+    --light:#F2F2F2;
+    --white:#FFFFFF;
+    --border:#E2E2E2;
+    --ink:#18150E;
+    --muted:#63605A;
+    --orange:#E84A18;
+    --orange-tint:#FCE3D8;
+    --goalfy:#7F23F7;
+    --goalfy-tint:#EEE0FF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Nunito Sans', system-ui, -apple-system, sans-serif;
+    background:var(--white);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--orange);}
+  code{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:.9em; background:var(--light); padding:1px 6px; border-radius:5px;}
+
+  /* ---- top nav ---- */
+  .topnav{
+    position:sticky; top:0; z-index:10;
+    background:rgba(13,14,14,.94); backdrop-filter:blur(6px);
+    display:flex; align-items:center; gap:22px;
+    padding:14px 32px; overflow-x:auto; white-space:nowrap;
+  }
+  .topnav .brand{color:#fff; font-weight:800; font-size:14.5px; margin-right:8px;}
+  .topnav .brand .dot{color:var(--orange);}
+  .topnav a{
+    color:rgba(255,255,255,.65); text-decoration:none; font-size:13.5px; font-weight:700;
+  }
+  .topnav a:hover{color:#fff;}
+
+  .wrap{max-width:980px; margin:0 auto; padding:0 32px;}
+
+  /* ---- hero ---- */
+  .hero{background:var(--dark); color:#fff; padding:64px 0 56px;}
+  .hero .eyebrow{color:var(--orange); font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; margin-bottom:14px;}
+  .hero h1{font-size:36px; line-height:1.15; margin:0 0 14px; letter-spacing:-.02em; text-wrap:balance;}
+  .hero p{font-size:16px; color:rgba(255,255,255,.7); max-width:60ch; line-height:1.6; margin:0;}
+  .hero .meta{margin-top:22px; font-size:12.5px; color:rgba(255,255,255,.45);}
+
+  section{padding:56px 0; border-bottom:1px solid var(--border);}
+  h2.sec-title{font-size:24px; margin:0 0 8px; letter-spacing:-.01em;}
+  p.sec-desc{color:var(--muted); font-size:15px; max-width:64ch; line-height:1.6; margin:0 0 32px;}
+  .sec-label{color:var(--orange); font-size:11.5px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; margin-bottom:10px;}
+
+  /* ---- deliverable cards ---- */
+  .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  @media (max-width:720px){.grid{grid-template-columns:1fr;} .topnav{gap:14px; padding:12px 18px;} .wrap{padding:0 18px;}}
+  .card{
+    border:1px solid var(--border); border-radius:14px; padding:20px;
+    background:var(--white);
+  }
+  .card .icon{font-size:22px; margin-bottom:10px; display:block;}
+  .card h3{font-size:15.5px; margin:0 0 6px;}
+  .card p{font-size:13.5px; color:var(--muted); line-height:1.55; margin:0 0 10px;}
+  .card a.loc{font-size:12.5px; font-weight:700; text-decoration:none;}
+  .card a.loc::after{content:" ↗";}
+
+  /* ---- how-to blocks ---- */
+  .how{border:1px solid var(--border); border-radius:14px; overflow:hidden; margin-bottom:14px;}
+  .how-head{display:flex; align-items:center; gap:10px; padding:16px 20px; background:var(--light);}
+  .how-head .n{
+    width:24px; height:24px; border-radius:50%; background:var(--dark); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex:none;
+  }
+  .how-head h3{margin:0; font-size:15px;}
+  .how-body{padding:16px 20px;}
+  .how-body p{margin:0 0 10px; font-size:13.5px; color:var(--muted); line-height:1.6;}
+  .say{
+    background:var(--dark); color:#F2F2F2; border-radius:10px; padding:12px 16px;
+    font-size:13.5px; line-height:1.6; margin:8px 0;
+  }
+  .say b{color:var(--orange);}
+  .say + .say{margin-top:8px;}
+
+  /* ---- strategy placeholder ---- */
+  .placeholder{
+    border:1.5px dashed #C9C4B8; border-radius:14px; padding:28px;
+    background:var(--light); text-align:left;
+  }
+  .placeholder .tag{
+    display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:800;
+    letter-spacing:.03em; text-transform:uppercase; color:var(--muted);
+    background:var(--white); border:1px solid var(--border); padding:4px 10px; border-radius:99px; margin-bottom:12px;
+  }
+  .placeholder p{margin:0; color:var(--muted); font-size:14px; line-height:1.6;}
+
+  footer{padding:36px 0 60px; font-size:12.5px; color:var(--muted);}
+  footer a{color:var(--muted); text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand">Hapo<span class="dot">·</span>Handoff</span>
+  <a href="#recebido">O que você recebeu</a>
+  <a href="#usar">Como usar</a>
+  <a href="#estrategia">Estratégia atual</a>
+  <a href="#ajuda">Onde pedir ajuda</a>
+</nav>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Grupo Hapo · Goalfy · Hapo Educação · Hapo Assessoria</div>
+    <h1>Bem-vindo(a) — isto é o que você está assumindo</h1>
+    <p>Esta página resume tudo que veio junto com este repositório: as ferramentas prontas para usar, como acionar cada uma através do Claude Code, e o que está rodando hoje em anúncios. Não precisa decorar nada — o <code>CLAUDE.md</code> deste repositório já conduz o Claude a te guiar tarefa por tarefa.</p>
+    <div class="meta">Gerado a partir do repositório <code>hapo-handoff</code> — última atualização: 22/09/2026</div>
+  </div>
+</div>
+
+<section id="recebido">
+  <div class="wrap">
+    <div class="sec-label">O pacote completo</div>
+    <h2 class="sec-title">O que você recebeu</h2>
+    <p class="sec-desc">Oito peças, prontas pra usar. Nenhuma delas exige que você leia documentação antes — abra o Claude Code na pasta certa e peça o que precisa.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="icon">🎨</span>
+        <h3>Sistema de criação de artes</h3>
+        <p>Gera peças de anúncio: cena via ChatGPT web + acabamento determinístico (cor de marca exata + logo real) via Python. Identidade da Goalfy já vem pronta.</p>
+        <a class="loc" href="https://github.com/jiancarlo-ship-it/ad-art-chatgpt-pipeline" target="_blank" rel="noopener">ad-art-chatgpt-pipeline</a>
+      </div>
+      <div class="card">
+        <span class="icon">✍️</span>
+        <h3>Skills de copy e brief de arte</h3>
+        <p>Transformam uma narrativa aprovada em brief de arte completo, ou escrevem a legenda padrão de anúncio no tom do grupo.</p>
+        <a class="loc" href="./skills/ad-art-brief/SKILL.md">skills/ad-art-brief</a> · <a class="loc" href="./skills/ad-creative-copy/SKILL.md">skills/ad-creative-copy</a>
+      </div>
+      <div class="card">
+        <span class="icon">📣</span>
+        <h3>Skill de Meta Ads</h3>
+        <p>Gerencia campanhas do Facebook/Instagram via SDK oficial — ler, criar, editar, pausar, duplicar. Já filtrada só para as contas do Grupo Hapo.</p>
+        <a class="loc" href="./skills/meta-ads-hapo/README.md">skills/meta-ads-hapo</a>
+      </div>
+      <div class="card">
+        <span class="icon">📊</span>
+        <h3>Dashboard de Ads ao vivo</h3>
+        <p>Meta Ads das 3 contas + funil do Goalfy CRM em tempo real. Já está no ar — não precisa configurar nada só pra visualizar.</p>
+        <a class="loc" href="https://hapo-marketing-dashboard.onrender.com/" target="_blank" rel="noopener">hapo-marketing-dashboard.onrender.com</a>
+      </div>
+      <div class="card">
+        <span class="icon">🎨</span>
+        <h3>Brand systems</h3>
+        <p>Paleta, tipografia, logo e componentes oficiais — Marca Mãe/Hapo Assessoria, Hapo Educação e Goalfy (repositório próprio).</p>
+        <a class="loc" href="./brand-systems/grupo-hapo-marca-mae/brand-system-hapo.html">brand-system-hapo.html</a> · <a class="loc" href="https://github.com/jiancarlo-ship-it/goalfy-brand-system" target="_blank" rel="noopener">goalfy-brand-system</a>
+      </div>
+      <div class="card">
+        <span class="icon">📐</span>
+        <h3>Diretrizes de criativos do grupo</h3>
+        <p>Copywriting avançado, roteiros de reels/ads e padrões de legenda válidos para as 3 marcas.</p>
+        <a class="loc" href="./docs/diretrizes-criativos-grupo/README.md">docs/diretrizes-criativos-grupo</a>
+      </div>
+      <div class="card">
+        <span class="icon">🧭</span>
+        <h3>Playbook comercial (Hapo Educação)</h3>
+        <p>Metodologia SPIN Selling + técnica de Ponte Cenário A→B, publicado como site interativo pro time acompanhar durante a call.</p>
+        <a class="loc" href="https://hapo-educacao-playbook-vendas.vercel.app" target="_blank" rel="noopener">hapo-educacao-playbook-vendas.vercel.app</a>
+      </div>
+      <div class="card">
+        <span class="icon">🗂️</span>
+        <h3>Criativos e vídeos já produzidos</h3>
+        <p>Histórico completo por marca, inclusive testes e variações descartadas — já compartilhado, sem precisar pedir acesso.</p>
+        <a class="loc" href="https://drive.google.com/drive/folders/1g-2_aBQCwKpk-n4UTnFhPbNX-TRCYoSd" target="_blank" rel="noopener">Google Drive</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="usar">
+  <div class="wrap">
+    <div class="sec-label">Instruções de uso</div>
+    <h2 class="sec-title">Como usar cada coisa</h2>
+    <p class="sec-desc">Você não precisa rodar comando nenhum manualmente — fale em português normal com o Claude Code dentro da pasta certa. Os exemplos abaixo são só ponto de partida.</p>
+
+    <div class="how">
+      <div class="how-head"><span class="n">1</span><h3>Gerar uma arte de anúncio</h3></div>
+      <div class="how-body">
+        <p>Clone <code>ad-art-chatgpt-pipeline</code> e <code>goalfy-brand-system</code> como pastas irmãs (uma do lado da outra), abra o Claude Code dentro de <code>ad-art-chatgpt-pipeline</code>, e diga:</p>
+        <div class="say">"Quero gerar uma arte pra <b>Goalfy</b> sobre [assunto], formato Feed."</div>
+        <p>O Claude já usa a identidade visual da Goalfy pronta (paleta, logo, fonte) e conduz o resto: referência visual, headline, geração no ChatGPT, acabamento. Único pré-requisito: conta paga no ChatGPT com geração de imagem.</p>
+      </div>
+    </div>
+
+    <div class="how">
+      <div class="how-head"><span class="n">2</span><h3>Escrever legenda ou brief de arte</h3></div>
+      <div class="how-body">
+        <p>Dentro deste repositório (ou com as skills copiadas para <code>~/.claude/skills/</code>), diga:</p>
+        <div class="say">"Monta o brief de arte pra essa narrativa: [descrição]."</div>
+        <div class="say">"Escreve a legenda desse anúncio pra Hapo Educação, sobre [tema]."</div>
+      </div>
+    </div>
+
+    <div class="how">
+      <div class="how-head"><span class="n">3</span><h3>Mexer em campanhas do Meta Ads</h3></div>
+      <div class="how-body">
+        <p>Com a skill <code>meta-ads-hapo</code> instalada e o token configurado (o Claude pede na hora se faltar), diga:</p>
+        <div class="say">"Lista as campanhas ativas da conta da Goalfy."</div>
+        <div class="say">"Pausa a campanha [nome] e me mostra o motivo de performance."</div>
+      </div>
+    </div>
+
+    <div class="how">
+      <div class="how-head"><span class="n">4</span><h3>Ver métricas e o funil comercial</h3></div>
+      <div class="how-body">
+        <p>Só abrir o dashboard ao vivo, sem pedir nada a ninguém — ele já busca os dados reais das 3 contas Meta Ads e do Goalfy CRM. Se quiser editar ou adicionar algo novo lá, peça ao Claude Code dentro do repo <code>hapo-marketing-dashboard</code>.</p>
+      </div>
+    </div>
+
+    <div class="how">
+      <div class="how-head"><span class="n">5</span><h3>Conferir a identidade visual antes de criar algo</h3></div>
+      <div class="how-body">
+        <p>Abra <code>brand-systems/grupo-hapo-marca-mae/brand-system-hapo.html</code> (Hapo/Assessoria/Educação) ou <code>brand-system-goalfy.html</code> no repositório da Goalfy — cor, tipografia e componentes reais, extraídos direto dos sites ao vivo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="estrategia">
+  <div class="wrap">
+    <div class="sec-label">Onde as coisas estão hoje</div>
+    <h2 class="sec-title">Estratégia de anúncios atual</h2>
+    <p class="sec-desc">O que está no ar agora em cada marca — orçamento, meta e foco do momento.</p>
+    <div class="placeholder">
+      <span class="tag">🚧 Aguardando detalhamento</span>
+      <p>Esta seção ainda vai ser preenchida com a estratégia de campanhas em vigor (Goalfy, Hapo Educação e Hapo Assessoria) — orçamentos, metas e foco atual de cada uma. Até lá, o <code>CLAUDE.md</code> deste repositório já tem um resumo por marca que o Claude usa como contexto ao responder perguntas sobre campanhas.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="ajuda">
+  <div class="wrap">
+    <p><b>Alguma dúvida sobre o que fazer a seguir?</b> Não precisa procurar nada nesta página de novo — só volte a conversar com o Claude Code aqui dentro do repositório. Ele lê o <a href="./CLAUDE.md">CLAUDE.md</a> automaticamente e sabe pra qual ferramenta te mandar e qual credencial pedir, na hora certa. Para o detalhe completo de acessos, veja <a href="./docs/onboarding-checklist.md">docs/onboarding-checklist.md</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

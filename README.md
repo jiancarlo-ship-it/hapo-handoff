@@ -4,10 +4,15 @@ Repositório de passagem de bastão do trabalho de marketing/growth do Grupo
 Hapo (Goalfy, Hapo Educação, Hapo Assessoria). Não é uma cópia completa de
 tudo que existia — é um recorte selecionado do que faz sentido continuar.
 
-**Comece por [`docs/onboarding-checklist.md`](./docs/onboarding-checklist.md)**
-— lista tudo que você precisa pedir ao Jian (tokens, acessos, contas) para
-conseguir efetivamente usar o que está aqui. Por decisão dele, nenhuma
-credencial foi deixada pronta de antemão.
+**Não leia este README primeiro.** Clone este repositório e abra a pasta
+com o [Claude Code](https://claude.com/claude-code) — o arquivo
+[`CLAUDE.md`](./CLAUDE.md) carrega sozinho e conduz o onboarding: mostra o
+que foi entregue, abre o dashboard/brand systems/criativos, e só pede
+token/acesso na hora exata em que uma tarefa específica precisar. Ver
+também [`bem-vindo.html`](./bem-vindo.html) (aberto automaticamente nesse
+fluxo) e [`docs/onboarding-checklist.md`](./docs/onboarding-checklist.md)
+— mesma lista de credenciais em formato estático, caso prefira ler sem o
+Claude Code.
 
 ## Onde está cada coisa
 

@@ -15,7 +15,38 @@ outro arquivo antes de começar — você conduz. Regra central:
 > tarde"). O mapa de "qual tarefa precisa de qual credencial" está na seção
 > **Ferramentas** abaixo.
 
-## Passo 0 — Entenda o que a pessoa quer fazer agora
+## Passo 0a — Primeira vez que ela abre este repositório
+
+Se esta é a primeira conversa (ela diz algo como "acabei de clonar", "o
+que eu recebi", "bora começar", "me mostra o que tem aqui", ou qualquer
+sinal de que é a primeira vez), não espere ela pedir peça por peça —
+mostre tudo de uma vez. São só leituras/visualizações, pode abrir direto
+sem pedir confirmação:
+
+1. O dashboard ao vivo, já funcional com dados reais de campanha (não
+   precisa de nenhuma credencial pra só visualizar):
+   `https://hapo-marketing-dashboard.onrender.com/`
+2. Os dois brand systems em HTML:
+   - `brand-systems/grupo-hapo-marca-mae/brand-system-hapo.html` (já está
+     neste repositório).
+   - `brand-system-goalfy.html`, na raiz do repo `goalfy-brand-system` —
+     se ainda não estiver clonado, clone-o
+     (`git clone https://github.com/jiancarlo-ship-it/goalfy-brand-system.git`,
+     como pasta irmã deste repositório) e abra a partir de lá.
+3. A pasta de criativos e vídeos no Google Drive:
+   `https://drive.google.com/drive/folders/1g-2_aBQCwKpk-n4UTnFhPbNX-TRCYoSd`
+4. `bem-vindo.html`, deste repositório — abra por último: é o resumo de
+   tudo que foi entregue, com instruções de uso de cada ferramenta.
+
+Para abrir cada um no navegador padrão, use o comando do sistema
+operacional dela: `start <caminho-ou-url>` (Windows), `open <...>`
+(macOS) ou `xdg-open <...>` (Linux). Se não tiver certeza do SO, pergunte
+ou tente o comando mais provável e ajuste se falhar.
+
+Depois de abrir os quatro, pergunte no que ela quer começar a mexer, e
+siga pro Passo 0b.
+
+## Passo 0b — Entenda o que a pessoa quer fazer agora
 
 Pergunte, em uma frase, o que ela precisa hoje ("ver como estão as
 campanhas", "criar uma arte de anúncio", "mudar orçamento do Meta Ads",
