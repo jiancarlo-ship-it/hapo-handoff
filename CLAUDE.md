@@ -142,19 +142,45 @@ Oriente clonar esse repo e abrir com Claude Code lá — ele tem seu próprio
 plano pago (acesso a geração de imagem)** — não usa a API da OpenAI, só a
 interface web.
 
-Os assets de marca da Goalfy (paleta, logo, fonte Red Hat Text) já existem
-prontos no repo `goalfy-brand-system`
-(https://github.com/jiancarlo-ship-it/goalfy-brand-system) — se for
-configurar a Goalfy no pipeline de artes, aponte pra lá em vez de pedir
-esses dados de novo.
+**A identidade visual da Goalfy já vem pronta, não peça de novo à pessoa.**
+O repo `goalfy-brand-system`
+(https://github.com/jiancarlo-ship-it/goalfy-brand-system) tem em
+`integrations/ad-art-chatgpt-pipeline.config.json` um config já preenchido
+(paleta, logo, fonte Red Hat Text) pronto pra virar o
+`config/goalfy.json` do pipeline. Para isso funcionar (os caminhos do
+logo/fonte são relativos):
+1. Clone `goalfy-brand-system` como pasta **irmã** de
+   `ad-art-chatgpt-pipeline` (mesmo diretório pai dos dois — se ela já
+   clonou o pipeline em outro lugar, clone este aqui do lado).
+2. Copie o arquivo pronto:
+   `cp goalfy-brand-system/integrations/ad-art-chatgpt-pipeline.config.json ad-art-chatgpt-pipeline/config/goalfy.json`.
+3. Pronto — quando for gerar a peça, pule direto pro passo de novo
+   projeto do `CLAUDE.md`/README do pipeline (identidade de marca já está
+   resolvida, não rode a entrevista de paleta/logo/fonte dele).
+
+Se for configurar Hapo Educação ou Hapo Assessoria no mesmo pipeline (não
+existe integração pronta pra elas ainda), aí sim siga a entrevista normal
+do `CLAUDE.md` do pipeline — e avise que a paleta oficial da Hapo Educação
+ainda não tem hex confirmado (ver pendências).
 
 ### "Quero mudar algo no dashboard (adicionar card, corrigir bug, mudar métrica)"
 
 Repositório: **`hapo-marketing-dashboard`**
 (https://github.com/jiancarlo-ship-it/hapo-marketing-dashboard), stack
 Node.js puro (`server.js`), hospedado no Render.
-1. Peça acesso de colaborador no repo GitHub e no serviço Render (ou
-   transferência).
+1. Pergunte primeiro: dá pra transferir/adicionar colaborador no serviço
+   Render que já existe (o dashboard ao vivo que todo mundo já usa), ou
+   ela vai precisar subir uma cópia própria do zero? Se o Jian conseguir
+   transferir, é o caminho mais simples — só pedir acesso de colaborador
+   no repo GitHub e no serviço Render.
+   - **Se não der pra transferir**, o repo já tem `render.yaml` (Blueprint
+     pronto: build `npm install`, start `node server.js`, variáveis já
+     declaradas) — no Render, "New" → "Blueprint" → aponta pro repo
+     (depois de ter acesso a ele) → o Render lê o `render.yaml` sozinho e
+     só falta preencher o valor das env vars na hora (não vem nenhuma
+     preenchida, o arquivo só declara os nomes). Isso cria um dashboard
+     novo, independente do antigo — avise a pessoa que a URL vai ser
+     diferente da atual.
 2. Pra rodar localmente ela vai precisar do `.env` com: `META_ACCESS_TOKEN`,
    `GEMINI_API_KEY`, `GOALFY_PREVENDAS_URL`, `GOALFY_VENDAS_URL`, e
    opcionalmente `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN`
